@@ -11,8 +11,8 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
-  title: "Golfera — Power Your Play",
-  description: "Premium golf league: track rounds, scorecards and practice time.",
+  title: "Game of Life Sports — Sports IP & Sport-tainment",
+  description: "Game of Life Sports creates, owns and grows sports IP and leagues across India, starting with golf. Build with us.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
