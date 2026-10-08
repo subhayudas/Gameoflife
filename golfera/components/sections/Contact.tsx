@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <>
       <section id="contact" className="relative isolate overflow-hidden bg-green-900 py-24 text-white md:py-32">
-        <Image src="/img/photo-qgl1.webp" alt="" fill sizes="100vw" className="-z-20 object-cover opacity-25" />
+        <Image src="/img/s1/contact.webp" alt="" fill sizes="100vw" className="-z-20 object-cover opacity-25" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-green-900 via-green-900/70 to-green-950" />
         <Container>
           <Reveal className="max-w-3xl">

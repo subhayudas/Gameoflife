@@ -4,9 +4,11 @@
 
 export const NAV = [
   { label: "Properties", href: "#properties" },
+  { label: "Season 1", href: "#season-one" },
   { label: "Partner", href: "#partner" },
   { label: "Calendar", href: "#calendar" },
   { label: "Leadership", href: "#leadership" },
+  { label: "Gallery", href: "#gallery" },
 ];
 
 export const HERO_STATS = [
@@ -43,7 +45,8 @@ export const PROPERTIES: Property[] = [
     when: "Season 2 · 21 Feb – 5 Mar 2027",
     where: "Pune & Mumbai",
     logo: "/img/logo-72.webp",
-    photo: "/img/photo-72.webp",
+    photo: "/img/s1/props72.webp",
+    position: "40% 40%",
     flagship: true,
   },
   {
@@ -90,6 +93,35 @@ export const PROPERTIES: Property[] = [
     photo: "/img/photo-titans.webp",
   },
 ];
+
+export const SEASON_ONE = [
+  { n: "01", title: "Launch", text: "PGTI and Game of Life unveil the league to the media in Delhi.", img: "/img/s1/launch.webp", pos: "50% 40%" },
+  { n: "02", title: "Auction", text: "Six franchises build their squads in a live player auction.", img: "/img/s1/auction.webp", pos: "30% 50%" },
+  { n: "03", title: "Teams", text: "Franchise launches, like UP Prometheans’, give each team its identity.", img: "/img/s1/teams.webp", pos: "50% 50%" },
+  { n: "04", title: "Rounds", text: "Team matches across Delhi NCR’s leading courses.", img: "/img/s1/rounds.webp", pos: "50% 55%" },
+  { n: "05", title: "The final", text: "Rajasthan Regals beat UP Prometheans 12–3 at Qutab Golf Course.", img: "/img/s1/final.webp", pos: "50% 40%" },
+  { n: "06", title: "Trophy", text: "Handcrafted by artisans, from sheet metal to mirror finish.", img: "/img/s1/trophy.webp", pos: "50% 40%" },
+];
+
+export const TROPHY_CRAFT = [
+  { img: "/img/s1/craft1.webp", alt: "Artisan welding the 72 The League trophy" },
+  { img: "/img/s1/craft2.webp", alt: "Artisan polishing the 72 The League trophy" },
+  { img: "/img/s1/craft3.webp", alt: "Hand-drawn sketch of the trophy design" },
+];
+
+export const BRAND_SPOTS = [
+  { title: "Tee boxes", text: "League and sponsor walls at every hole.", img: "/img/s1/tee.webp", pos: "55% 50%" },
+  { title: "Team vans", text: "Franchise-branded transport on site.", img: "/img/s1/van.webp", pos: "50% 55%" },
+  { title: "Caddie bibs", text: "Your mark on every bag-carrier.", img: "/img/s1/bib.webp", pos: "50% 45%" },
+  { title: "Broadcast", text: "Live on Eurosport India, with on-screen branding.", img: "/img/s1/broadcast.webp", pos: "50% 50%" },
+];
+
+export const AWARD = {
+  eyebrow: "Recognition",
+  title: "Sports Startup of the Year",
+  line: "Game of Life Sports named Winner – Silver at the Sports Awards 2026.",
+  img: "/img/s1/award.webp",
+};
 
 export const BRAND_OFFER = [
   { n: "01", title: "Visibility", text: "Title and presenting rights across jerseys, courses, broadcast and digital." },
@@ -141,7 +173,7 @@ export const KAPIL = {
   name: "Kapil Dev",
   role: "President, DP World PGTI · The Torchbearer",
   line: "India’s most celebrated sporting export, connecting golf to the country’s cricket-loving millions.",
-  img: "/img/leader-kapil.webp",
+  img: "/img/s1/kapil.webp",
 };
 
 export const CONTACT = {

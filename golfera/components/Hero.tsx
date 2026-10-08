@@ -37,17 +37,17 @@ export default function Hero() {
         </div>
 
         <div className="relative order-first lg:order-none">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] ring-1 ring-white/15 lg:aspect-[4/3.6]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] ring-1 ring-white/15">
             <Image
-              src="/img/photo-alma1.webp"
-              alt="Golfer at the top of the backswing"
+              src="/img/s1/hero.webp"
+              alt="Rajasthan Regals lift the 72 The League trophy at the Champions 2026 podium"
               fill
               priority
               sizes="(min-width:1024px) 45vw, 92vw"
-              className="object-cover object-[38%_30%]"
+              className="object-cover object-[50%_60%]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-green-950/60 via-transparent to-transparent" />
-            <span className="absolute bottom-5 left-5 rounded-full bg-lime px-4 py-2 text-xs font-bold tracking-wide text-green-950">
+            <div className="absolute inset-0 bg-gradient-to-t from-green-950/40 via-transparent to-transparent" />
+            <span className="absolute left-5 top-5 rounded-full bg-lime px-4 py-2 text-xs font-bold tracking-wide text-green-950">
               Play · Grow · Succeed
             </span>
           </div>

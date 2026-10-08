@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AUDIENCE, BRAND_OFFER, PARTNERS } from "@/lib/data";
+import { AUDIENCE, BRAND_OFFER, BRAND_SPOTS, PARTNERS } from "@/lib/data";
 import { Reveal } from "../Reveal";
 import { BTN_PRIMARY, Container, SectionHead } from "./Shared";
 
@@ -19,6 +19,35 @@ export default function Partner() {
               </div>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-14">
+          <Reveal>
+            <span className="eyebrow text-lime">Where your brand shows up</span>
+          </Reveal>
+          <ul className="mt-5 grid grid-cols-2 gap-3 md:gap-5 lg:grid-cols-4">
+            {BRAND_SPOTS.map((b, i) => (
+              <li key={b.title}>
+                <Reveal delay={i * 80} className="h-full">
+                  <figure className="group relative isolate flex aspect-[4/5] overflow-hidden rounded-3xl bg-green-900">
+                    <Image
+                      src={b.img}
+                      alt={`${b.title} at 72 The League`}
+                      fill
+                      sizes="(min-width:1024px) 25vw, 50vw"
+                      style={{ objectPosition: b.pos }}
+                      className="-z-10 object-cover transition duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 -z-10 bg-gradient-to-t from-green-950 via-green-950/30 to-transparent" />
+                    <figcaption className="mt-auto p-4 md:p-5">
+                      <h3 className="display text-xl md:text-3xl">{b.title}</h3>
+                      <p className="mt-1.5 text-xs leading-snug text-white/70 md:text-sm">{b.text}</p>
+                    </figcaption>
+                  </figure>
+                </Reveal>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="mt-14 grid items-center gap-10 lg:grid-cols-[1fr_1.2fr]">

@@ -14,7 +14,7 @@ export default function Header() {
         </a>
 
         <nav className="hidden md:block" aria-label="Primary">
-          <ul className="flex items-center gap-8 text-sm font-medium text-white/80">
+          <ul className="flex items-center gap-6 text-sm font-medium text-white/80 lg:gap-8">
             {NAV.map((n) => (
               <li key={n.label}>
                 <a href={n.href} className="transition hover:text-white">
