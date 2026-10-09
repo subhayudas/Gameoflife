@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "golfera-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "golfera", "run", "dev", "--", "-p", "3111"],
+      "port": 3111
+    }
+  ]
+}

@@ -11,6 +11,14 @@ export const NAV = [
   { label: "Gallery", href: "#gallery" },
 ];
 
+// Hero photograph. hero-1 is the primary; hero-2 (Qutab clubhouse) is the alternate —
+// swap the key to change the home-page hero.
+export const HERO_IMAGES = {
+  "hero-1": { alt: "A player plays out of a bunker during 72 The League Season 1", pos: "62% 55%" },
+  "hero-2": { alt: "A player hits down the fairway toward the Qutab Golf Course clubhouse", pos: "50% 55%" },
+} as const;
+export const HERO: keyof typeof HERO_IMAGES = "hero-1";
+
 export const HERO_STATS = [
   { value: "5", label: "Sports properties" },
   { value: "500+", label: "Decision-makers every season" },
@@ -18,9 +26,9 @@ export const HERO_STATS = [
 ];
 
 export const PLATFORM = [
-  { title: "League IP", text: "Franchise-led leagues built and owned like proper sports properties." },
-  { title: "Grassroots", text: "10-year State Golf Association partnerships, plus junior and women’s pathways." },
-  { title: "Fan layer", text: "Broadcast on Eurosport India, OTT docuseries, fantasy golf and a league app." },
+  { title: "League IP", text: "Franchise-led leagues built and owned like proper sports properties.", img: "/img/s1/trophy.webp", pos: "50% 40%" },
+  { title: "Grassroots", text: "10-year State Golf Association partnerships, plus junior and women’s pathways.", img: "/img/gallery/f/761.webp", pos: "50% 50%" },
+  { title: "Fan layer", text: "Broadcast on Eurosport India, OTT docuseries, fantasy golf and a league app.", img: "/img/s1/broadcast.webp", pos: "50% 50%" },
 ];
 
 export type Property = {
@@ -44,9 +52,9 @@ export const PROPERTIES: Property[] = [
     line: "India’s exclusive, PGTI-sanctioned professional golf league.",
     when: "Season 2 · 21 Feb – 5 Mar 2027",
     where: "Pune & Mumbai",
-    logo: "/img/logo-72.webp",
+    logo: "/img/logos/72.webp",
     photo: "/img/s1/props72.webp",
-    position: "40% 40%",
+    position: "50% 35%",
     flagship: true,
   },
   {
@@ -56,9 +64,9 @@ export const PROPERTIES: Property[] = [
     line: "India’s first franchise-owned amateur golf league, built to behave like sports IP.",
     when: "Season 3 · 13 Nov – 16 Dec 2026",
     where: "Delhi NCR",
-    logo: "/img/logo-qgl.webp",
-    photo: "/img/photo-qgl2.webp",
-    position: "18% 40%",
+    logo: "/img/logos/qgl.webp",
+    photo: "/img/gallery/f/106.webp",
+    position: "50% 60%",
     flagship: true,
   },
   {
@@ -68,9 +76,9 @@ export const PROPERTIES: Property[] = [
     line: "Nine of Delhi’s top schools. One day of tradition and rivalry.",
     when: "Annual",
     where: "Qutab Golf Course, Delhi",
-    logo: "/img/logo-alma.webp",
-    photo: "/img/photo-alma2.webp",
-    position: "42% 50%",
+    logo: "/img/logos/alma.webp",
+    photo: "/img/gallery/f/130.webp",
+    position: "50% 55%",
   },
   {
     id: "dgf",
@@ -79,8 +87,9 @@ export const PROPERTIES: Property[] = [
     line: "The DPS alumni network, where influence meets affluence.",
     when: "Annual",
     where: "Qutab Golf Course, Delhi",
-    logo: "/img/logo-dgf.webp",
-    photo: "/img/photo-dgf.webp",
+    logo: "/img/logos/dgf.webp",
+    photo: "/img/gallery/f/613.webp",
+    position: "50% 55%",
   },
   {
     id: "titans",
@@ -89,8 +98,9 @@ export const PROPERTIES: Property[] = [
     line: "Relive the rivalry: Dipsite Falcons vs Modern Eagles.",
     when: "Annual",
     where: "Qutab Golf Course, Delhi",
-    logo: "/img/logo-titans.webp",
-    photo: "/img/photo-titans.webp",
+    logo: "/img/logos/titans.webp",
+    photo: "/img/gallery/f/744.webp",
+    position: "50% 40%",
   },
 ];
 
@@ -136,13 +146,14 @@ export const AUDIENCE = [
   { value: "C-suite", label: "Founders, promoters & CEOs" },
 ];
 
+// Full-colour transparent logos, set directly on the page — never on a photo or a tile.
 export const PARTNERS = [
-  { src: "/img/sp-indusind.webp", alt: "IndusInd Bank" },
-  { src: "/img/sp-eurosport.webp", alt: "Eurosport" },
-  { src: "/img/sp-pgti.webp", alt: "DP World PGTI" },
-  { src: "/img/sp-max.webp", alt: "Max Estates" },
-  { src: "/img/sp-eugenix.webp", alt: "Eugenix Hair Sciences" },
-  { src: "/img/sp-mg.webp", alt: "MG Motor" },
+  { src: "/img/logos/indusind.webp", alt: "IndusInd Bank", w: 567, h: 72, cls: "h-7 md:h-8" },
+  { src: "/img/logos/eurosport.webp", alt: "Eurosport", w: 317, h: 69, cls: "h-7 md:h-8" },
+  { src: "/img/logos/pgti.webp", alt: "DP World PGTI", w: 247, h: 170, cls: "h-14 md:h-16" },
+  { src: "/img/logos/max.webp", alt: "Max Estates", w: 254, h: 127, cls: "h-12 md:h-14" },
+  { src: "/img/logos/eugenix.webp", alt: "Eugenix Hair Sciences", w: 376, h: 89, cls: "h-9 md:h-10" },
+  { src: "/img/logos/mg.webp", alt: "MG Motor", w: 178, h: 178, cls: "h-14 md:h-16" },
 ];
 
 export type CalItem = { prop: string; title: string; date: string; where: string; status?: string };
@@ -175,6 +186,9 @@ export const KAPIL = {
   line: "India’s most celebrated sporting export, connecting golf to the country’s cricket-loving millions.",
   img: "/img/s1/kapil.webp",
 };
+
+export const GOLS_LOGO = { src: "/img/logos/gols.webp", w: 578, h: 402 };
+export const GOLS_LOGO_LIGHT = { src: "/img/logos/gols-l.webp", w: 578, h: 402 };
 
 export const CONTACT = {
   email: "contact@golsports.in",

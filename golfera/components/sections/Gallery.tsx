@@ -71,7 +71,7 @@ export default function Gallery() {
   const current = open === null ? null : list[open];
 
   return (
-    <section id="gallery" className="bg-ivory py-20 md:py-28">
+    <section id="gallery" className="bg-paper py-20 md:py-28">
       <Container>
         <SectionHead eyebrow="Gallery" title="The Season 1 archive" sub={`${ITEMS.length} photographs from launch to final, straight from the League’s own photo library.`} />
 
@@ -84,11 +84,11 @@ export default function Gallery() {
                 setFilter(f.key);
                 setShown(PAGE);
               }}
-              className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${
-                filter === f.key ? "border-green-900 bg-green-900 text-white" : "border-green-900/25 text-green-900 hover:border-green-900"
+              className={`rounded-sm border px-4 py-2 text-[13px] font-medium transition ${
+                filter === f.key ? "border-forest-900 bg-forest-900 text-paper" : "border-forest-900/25 text-forest-900 hover:border-forest-900"
               }`}
             >
-              {f.label} <span className={filter === f.key ? "text-lime" : "text-ink/45"}>{counts[f.key]}</span>
+              {f.label} <span className={filter === f.key ? "text-olive" : "text-ink/45"}>{counts[f.key]}</span>
             </button>
           ))}
         </div>
@@ -102,7 +102,7 @@ export default function Gallery() {
                   setOpen(idx);
                 }}
                 aria-label={`Open photograph ${idx + 1} of ${list.length}`}
-                className="group block w-full overflow-hidden rounded-xl bg-sand"
+                className="group block w-full overflow-hidden rounded-lg bg-sand"
               >
                 <Image
                   src={thumb(it)}
@@ -119,7 +119,7 @@ export default function Gallery() {
 
         {shown < list.length && (
           <div className="mt-8 flex flex-col items-center gap-2">
-            <button onClick={() => setShown((s) => s + PAGE)} className="rounded-full bg-green-900 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-green-800">
+            <button onClick={() => setShown((s) => s + PAGE)} className="rounded-sm bg-forest-900 px-7 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-paper transition hover:bg-forest-700">
               Show more
             </button>
             <p className="text-xs text-ink/55">
@@ -130,12 +130,12 @@ export default function Gallery() {
       </Container>
 
       {current && (
-        <div role="dialog" aria-modal="true" aria-label="Photograph viewer" className="fixed inset-0 z-[60] flex flex-col bg-green-950/[0.97] text-white" onClick={() => setOpen(null)}>
+        <div role="dialog" aria-modal="true" aria-label="Photograph viewer" className="fixed inset-0 z-[60] flex flex-col bg-forest-950/[0.97] text-paper" onClick={() => setOpen(null)}>
           <div className="flex items-center justify-between px-5 py-4 text-sm" onClick={(e) => e.stopPropagation()}>
             <span className="font-medium text-white/70">
               {open! + 1} / {list.length}
             </span>
-            <button ref={closeRef} onClick={() => setOpen(null)} className="rounded-full border border-white/25 px-4 py-2 font-semibold hover:bg-white/10">
+            <button ref={closeRef} onClick={() => setOpen(null)} className="rounded-sm border border-paper/25 px-4 py-2 font-semibold hover:bg-white/10">
               Close
             </button>
           </div>

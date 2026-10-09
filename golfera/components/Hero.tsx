@@ -1,55 +1,40 @@
-import Image from "next/image";
-import { HERO_STATS } from "@/lib/data";
-import { BTN_GHOST, BTN_PRIMARY, Container } from "./sections/Shared";
+import { HERO, HERO_IMAGES } from "@/lib/data";
+import { Arrow, BTN_GHOST, BTN_PRIMARY, Container } from "./sections/Shared";
 
 export default function Hero() {
+  const img = HERO_IMAGES[HERO];
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-green-950 pt-16 text-white">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_80%_30%,rgba(200,240,96,0.12),transparent_70%)]" />
-      <Container className="grid min-h-[calc(100svh-4rem)] items-center gap-10 pb-12 pt-6 lg:py-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
-        <div>
-          <span className="eyebrow text-lime">Sports IP · Sport-tainment</span>
-          <h1 className="display mt-5 text-[clamp(2.8rem,6.2vw,5.4rem)]">
+    <section id="top" className="relative isolate overflow-hidden bg-forest-950 text-paper md:flex md:min-h-[calc(100svh-5rem)] md:items-center">
+      {/* Photo sits clean above the copy on phones; behind it on larger screens. */}
+      <div className="relative aspect-[4/3] w-full md:absolute md:inset-0 md:-z-20 md:aspect-auto">
+        <picture>
+          <source media="(min-width:768px)" srcSet={`/img/hero/${HERO}.webp`} />
+          <img src={`/img/hero/${HERO}-m.webp`} alt={img.alt} fetchPriority="high" style={{ objectPosition: img.pos }} className="absolute inset-0 h-full w-full object-cover" />
+        </picture>
+      </div>
+      <div className="absolute inset-0 -z-10 hidden bg-gradient-to-r from-forest-950/85 via-forest-950/45 to-forest-950/0 md:block" />
+
+      <Container className="py-12 md:py-24">
+        <div className="max-w-2xl">
+          <span className="eyebrow flex items-center gap-3 text-olive">
+            <span aria-hidden className="h-px w-10 bg-olive" />
+            Sports IP · Sport-tainment
+          </span>
+          <h1 className="serif mt-6 text-[clamp(2.9rem,6vw,5.2rem)]">
             Building India’s
             <br />
             next sports IP.
           </h1>
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/75">
+          <p className="mt-6 max-w-md text-base leading-relaxed text-paper/80 md:text-lg">
             Game of Life Sports is a sport-tainment company. We create, own and grow leagues and properties, starting with golf.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-9 flex flex-wrap gap-3">
             <a href="#properties" className={BTN_PRIMARY}>
-              Explore properties
+              Explore properties <Arrow />
             </a>
             <a href="#contact" className={BTN_GHOST}>
               Partner with us
             </a>
-          </div>
-
-          <dl className="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-white/15 pt-6">
-            {HERO_STATS.map((s) => (
-              <div key={s.label}>
-                <dt className="display text-3xl text-lime md:text-4xl">{s.value}</dt>
-                <dd className="mt-1 text-xs leading-snug text-white/60">{s.label}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-
-        <div className="relative order-first lg:order-none">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] ring-1 ring-white/15">
-            <Image
-              src="/img/s1/hero.webp"
-              alt="Rajasthan Regals lift the 72 The League trophy at the Champions 2026 podium"
-              fill
-              priority
-              sizes="(min-width:1024px) 45vw, 92vw"
-              className="object-cover object-[50%_60%]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-green-950/40 via-transparent to-transparent" />
-            <span className="absolute left-5 top-5 rounded-full bg-lime px-4 py-2 text-xs font-bold tracking-wide text-green-950">
-              Play · Grow · Succeed
-            </span>
           </div>
         </div>
       </Container>

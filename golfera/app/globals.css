@@ -1,58 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --green-950: #06180f;
-  --green-900: #0a2e1b;
-  --green-800: #0f3f26;
-  --ivory: #f6f4ee;
-  --sand: #ebe8dd;
-  --ink: #0c1f15;
-  --lime: #c8f060;
+  --forest-950: #0a2016;
+  --forest-900: #0f2c1d;
+  --forest-800: #17402a;
+  --forest-700: #1f5236;
+  --cream: #f4f1e6;
+  --paper: #fbfaf5;
+  --sand: #e9e4d2;
+  --ink: #14221a;
+  --olive: #a6a83c;
+  --olive-deep: #8a8c2a;
 }
 
 @theme inline {
   --font-sans: var(--font-inter), system-ui, sans-serif;
-  --font-display: var(--font-archivo), var(--font-inter), sans-serif;
-  --color-green-950: var(--green-950);
-  --color-green-900: var(--green-900);
-  --color-green-800: var(--green-800);
-  --color-ivory: var(--ivory);
+  --font-serif: var(--font-source-serif), Georgia, serif;
+  --color-forest-950: var(--forest-950);
+  --color-forest-900: var(--forest-900);
+  --color-forest-800: var(--forest-800);
+  --color-forest-700: var(--forest-700);
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
   --color-sand: var(--sand);
   --color-ink: var(--ink);
-  --color-lime: var(--lime);
+  --color-olive: var(--olive);
+  --color-olive-deep: var(--olive-deep);
 }
 
 html {
   scroll-behavior: smooth;
 }
 body {
-  background: var(--ivory);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans);
 }
 section[id] {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 5rem;
 }
 
-.display {
-  font-family: var(--font-display);
-  font-stretch: 70%;
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: 0.92;
+.serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.04;
   letter-spacing: -0.015em;
 }
 .eyebrow {
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform: translateY(18px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
   transition-delay: var(--d, 0ms);
 }
 .reveal.in {

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Stats from "@/components/sections/Stats";
 import Platform from "@/components/sections/Platform";
 import Properties from "@/components/sections/Properties";
 import Season from "@/components/sections/Season";
@@ -14,6 +15,7 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
+      <Stats />
       <Platform />
       <Properties />
       <Season />
