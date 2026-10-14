@@ -334,7 +334,7 @@ export const HERO_STATS = [
 ];
 
 export const PLATFORM = [
-  { title: "League IP", text: "Franchise-led leagues built and owned like proper sports properties.", img: "/img/s1/trophy.webp", pos: "50% 40%" },
+  { title: "League IP", text: "Franchise-led leagues built and owned like proper sports properties.", img: "/img/s1/trophy.webp", pos: "50% 40%", contain: true },
   { title: "Grassroots", text: "10-year State Golf Association partnerships, plus junior and women’s pathways.", img: "/img/gallery/f/761.webp", pos: "50% 50%" },
   { title: "Fan layer", text: "Broadcast on Eurosport India, OTT docuseries, fantasy golf and a league app.", img: "/img/s1/broadcast.webp", pos: "50% 50%" },
 ];
@@ -358,7 +358,7 @@ export const SEASON_ONE = [
   { n: "03", title: "Teams", text: "Franchise launches, like UP Prometheans’, give each team its identity.", img: "/img/s1/teams.webp", pos: "50% 50%" },
   { n: "04", title: "Rounds", text: "Team matches across Delhi NCR’s leading courses.", img: "/img/s1/rounds.webp", pos: "50% 55%" },
   { n: "05", title: "The final", text: "Rajasthan Regals beat UP Prometheans 12–3 at Qutab Golf Course.", img: "/img/s1/final.webp", pos: "50% 40%" },
-  { n: "06", title: "Trophy", text: "Handcrafted by artisans, from sheet metal to mirror finish.", img: "/img/s1/trophy.webp", pos: "50% 40%" },
+  { n: "06", title: "Trophy", text: "Handcrafted by artisans, from sheet metal to mirror finish.", img: "/img/s1/trophy.webp", pos: "50% 40%", contain: true },
 ];
 
 export const TROPHY_CRAFT = [

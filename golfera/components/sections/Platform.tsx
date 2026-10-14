@@ -21,7 +21,7 @@ export default function Platform({ link = false, eyebrow = "What we do", title =
                     fill
                     sizes="(min-width:768px) 30vw, 92vw"
                     style={{ objectPosition: p.pos }}
-                    className="object-cover transition duration-700 hover:scale-105"
+                    className={`transition duration-700 ${p.contain ? "object-contain p-3" : "object-cover hover:scale-105"}`}
                   />
                 </div>
                 <h3 className="serif mt-6 text-3xl text-forest-900">{p.title}</h3>
