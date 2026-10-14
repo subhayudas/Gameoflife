@@ -18,8 +18,8 @@ function Hero({ p }: { p: Property }) {
             <span aria-hidden>/</span>
             <span className="text-olive">{p.kind}</span>
           </nav>
-          <span className="mt-8 inline-flex rounded-2xl bg-paper p-4 shadow-lg shadow-forest-950/30">
-            <Image src={p.logo} alt={`${p.name} logo`} width={160} height={160} priority className="h-20 w-auto object-contain md:h-24" />
+          <span className="mt-8 flex h-32 w-32 items-center justify-center rounded-full bg-paper shadow-lg shadow-forest-950/30 md:h-36 md:w-36">
+            <Image src={p.logo} alt={`${p.name} logo`} width={160} height={160} priority className="h-auto w-auto max-h-[66%] max-w-[66%] object-contain" />
           </span>
           <h1 className="serif mt-6 text-[clamp(2.6rem,6vw,4.6rem)]">{p.name}</h1>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-paper/80 md:text-lg">{p.line}</p>

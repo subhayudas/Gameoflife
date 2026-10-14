@@ -10,8 +10,8 @@ export default function Footer() {
       <Container>
         <div className="grid gap-12 md:grid-cols-[1.2fr_2fr]">
           <div>
-            <span className="inline-flex rounded-xl bg-paper px-3 py-2">
-              <Image src={GOLS_LOGO.src} alt="Game of Life — Play · Grow · Succeed" width={GOLS_LOGO.w} height={GOLS_LOGO.h} className="h-14 w-auto" />
+            <span className="flex h-28 w-28 items-center justify-center rounded-full bg-paper">
+              <Image src={GOLS_LOGO.src} alt="Game of Life — Play · Grow · Succeed" width={GOLS_LOGO.w} height={GOLS_LOGO.h} className="h-auto w-auto max-h-[70%] max-w-[76%] object-contain" />
             </span>
             <p className="mt-5 max-w-xs text-sm leading-relaxed">We create, own and grow sports IP, starting with golf.</p>
             <a href={`mailto:${CONTACT.email}`} className="mt-5 inline-block text-sm font-medium text-paper underline underline-offset-4 hover:text-olive">
