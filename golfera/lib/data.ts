@@ -5,7 +5,6 @@
 // ───────────────────────────── Navigation ─────────────────────────────
 
 export const GOLS_LOGO = { src: "/img/logos/gols.webp", w: 578, h: 402 };
-export const GOLS_LOGO_LIGHT = { src: "/img/logos/gols-l.webp", w: 578, h: 402 };
 
 export const CONTACT = {
   email: "contact@golsports.in",
@@ -34,7 +33,6 @@ export type Property = {
   when: string;
   where: string;
   logo: string;
-  logoLight: string;
   photo: string;
   position?: string;
   flagship?: boolean;
@@ -88,7 +86,6 @@ export const PROPERTIES: Property[] = [
     when: "Season 2 · 21 Feb – 5 Mar 2027",
     where: "Pune & Mumbai",
     logo: "/img/logos/72.webp",
-    logoLight: "/img/logos/72-l.webp",
     photo: "/img/s1/props72.webp",
     position: "50% 35%",
     flagship: true,
@@ -136,7 +133,6 @@ export const PROPERTIES: Property[] = [
     when: "Season 3 · 13 Nov – 16 Dec 2026",
     where: "Delhi NCR",
     logo: "/img/logos/qgl.webp",
-    logoLight: "/img/logos/qgl-l.webp",
     photo: "/img/gallery/f/106.webp",
     position: "50% 60%",
     flagship: true,
@@ -186,7 +182,6 @@ export const PROPERTIES: Property[] = [
     when: "Annual",
     where: "Qutab Golf Course, Delhi",
     logo: "/img/logos/alma.webp",
-    logoLight: "/img/logos/alma-l.webp",
     photo: "/img/gallery/f/130.webp",
     position: "50% 55%",
     next: { label: "Next date", value: "To be announced", sub: "An annual event at Qutab Golf Course, New Delhi." },
@@ -234,7 +229,6 @@ export const PROPERTIES: Property[] = [
     when: "Annual",
     where: "Qutab Golf Course, Delhi",
     logo: "/img/logos/dgf.webp",
-    logoLight: "/img/logos/dgf-l.webp",
     photo: "/img/gallery/f/619.webp",
     position: "50% 50%",
     next: { label: "Next date", value: "To be announced", sub: "An annual bash at Qutab Golf Course, New Delhi." },
@@ -277,7 +271,6 @@ export const PROPERTIES: Property[] = [
     when: "Annual",
     where: "Qutab Golf Course, Delhi",
     logo: "/img/logos/titans.webp",
-    logoLight: "/img/logos/titans-l.webp",
     photo: "/img/gallery/f/744.webp",
     position: "50% 40%",
     next: { label: "Next date", value: "To be announced", sub: "An annual invitational at Qutab Golf Course, New Delhi." },

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CONTACT, GOLS_LOGO_LIGHT, NAV, NAV_CTA, PROPERTIES, SOCIALS } from "@/lib/data";
+import { CONTACT, GOLS_LOGO, NAV, NAV_CTA, PROPERTIES, SOCIALS } from "@/lib/data";
 import { Container } from "./sections/Shared";
 
 export default function Footer() {
@@ -10,7 +10,9 @@ export default function Footer() {
       <Container>
         <div className="grid gap-12 md:grid-cols-[1.2fr_2fr]">
           <div>
-            <Image src={GOLS_LOGO_LIGHT.src} alt="Game of Life — Play · Grow · Succeed" width={GOLS_LOGO_LIGHT.w} height={GOLS_LOGO_LIGHT.h} className="h-16 w-auto" />
+            <span className="inline-flex rounded-xl bg-paper px-3 py-2">
+              <Image src={GOLS_LOGO.src} alt="Game of Life — Play · Grow · Succeed" width={GOLS_LOGO.w} height={GOLS_LOGO.h} className="h-14 w-auto" />
+            </span>
             <p className="mt-5 max-w-xs text-sm leading-relaxed">We create, own and grow sports IP, starting with golf.</p>
             <a href={`mailto:${CONTACT.email}`} className="mt-5 inline-block text-sm font-medium text-paper underline underline-offset-4 hover:text-olive">
               {CONTACT.email}
