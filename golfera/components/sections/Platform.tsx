@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PLATFORM } from "@/lib/data";
 import { Reveal } from "../Reveal";
-import { Container, SectionHead } from "./Shared";
+import { Arrow, Container, SectionHead } from "./Shared";
 
-export default function Platform() {
+export default function Platform({ link = false, eyebrow = "What we do", title = "We create, own and grow sports IP.", sub = "Properties built like proper sports assets, from the franchise to the fan." }: { link?: boolean; eyebrow?: string; title?: string; sub?: string }) {
   return (
-    <section id="about" className="bg-cream py-20 md:py-28">
+    <section id="what-we-do" className="bg-cream py-20 md:py-28">
       <Container>
-        <SectionHead center eyebrow="What we do" title="We create, own and grow sports IP." sub="Properties built like proper sports assets, from the franchise to the fan." />
+        <SectionHead center eyebrow={eyebrow} title={title} sub={sub} />
 
         <ul className="mt-14 grid gap-px overflow-hidden border border-forest-900/15 bg-forest-900/15 md:grid-cols-3">
           {PLATFORM.map((p, i) => (
@@ -29,6 +30,13 @@ export default function Platform() {
             </li>
           ))}
         </ul>
+        {link && (
+          <Reveal className="mt-10 flex justify-center">
+            <Link href="/about" className="inline-flex items-center gap-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-forest-900 hover:text-forest-700">
+              About Game of Life Sports <Arrow className="h-5 w-5" />
+            </Link>
+          </Reveal>
+        )}
       </Container>
     </section>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { HERO, HERO_IMAGES } from "@/lib/data";
 import { Arrow, BTN_GHOST, BTN_PRIMARY, Container } from "./sections/Shared";
 
@@ -32,9 +33,9 @@ export default function Hero() {
             <a href="#properties" className={BTN_PRIMARY}>
               Explore properties <Arrow />
             </a>
-            <a href="#contact" className={BTN_GHOST}>
+            <Link href="/partner" className={BTN_GHOST}>
               Partner with us
-            </a>
+            </Link>
           </div>
         </div>
       </Container>

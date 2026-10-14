@@ -21,7 +21,7 @@ const FILTERS = [
   { key: "media", label: "Media & press" },
 ];
 
-const PAGE = 40;
+const PAGE = 24;
 const thumb = (i: Item) => `/img/gallery/t/${i.id}.webp`;
 const full = (i: Item) => `/img/gallery/f/${i.id}.webp`;
 

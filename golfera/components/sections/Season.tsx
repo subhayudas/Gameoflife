@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SEASON_ONE, TROPHY_CRAFT } from "@/lib/data";
 import { Reveal } from "../Reveal";
 import { Arrow, Container, SectionHead } from "./Shared";
 
 export default function Season() {
   return (
-    <section id="season-one" className="bg-forest-900 py-20 text-paper md:py-28">
+    <section id="season-one" aria-label="Season 1 in pictures" className="bg-forest-900 py-20 text-paper md:py-28">
       <Container>
         <SectionHead
           dark
@@ -58,9 +59,9 @@ export default function Season() {
         </Reveal>
 
         <div className="mt-10">
-          <a href="#gallery" className="inline-flex items-center gap-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-paper hover:text-olive">
+          <Link href="/media#gallery" className="inline-flex items-center gap-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-paper hover:text-olive">
             See the full Season 1 gallery <Arrow className="h-5 w-5" />
-          </a>
+          </Link>
         </div>
       </Container>
     </section>

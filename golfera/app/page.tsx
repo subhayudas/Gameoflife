@@ -1,29 +1,23 @@
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import CtaBand from "@/components/CtaBand";
 import Stats from "@/components/sections/Stats";
 import Platform from "@/components/sections/Platform";
-import Properties from "@/components/sections/Properties";
-import Season from "@/components/sections/Season";
-import Partner from "@/components/sections/Partner";
+import PropertyCards from "@/components/sections/PropertyCards";
 import Calendar from "@/components/sections/Calendar";
-import Leadership from "@/components/sections/Leadership";
-import Gallery from "@/components/sections/Gallery";
-import Contact from "@/components/sections/Contact";
+import BrandPitch from "@/components/sections/BrandPitch";
+import LeadershipTeaser from "@/components/sections/LeadershipTeaser";
 
 export default function Home() {
   return (
-    <main>
-      <Header />
+    <>
       <Hero />
       <Stats />
-      <Platform />
-      <Properties />
-      <Season />
-      <Partner />
+      <Platform link />
+      <PropertyCards />
       <Calendar />
-      <Leadership />
-      <Gallery />
-      <Contact />
-    </main>
+      <BrandPitch />
+      <LeadershipTeaser />
+      <CtaBand />
+    </>
   );
 }
