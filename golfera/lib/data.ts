@@ -342,7 +342,6 @@ export const PLATFORM = [
 export const GRASSROOTS = [
   { title: "State Golf Associations", text: "10-year partnerships to develop golf and create new pathways for junior and grassroots programmes." },
   { title: "Juniors and schools", text: "72 Juniors and a School Open bring young golfers into the league ecosystem." },
-  { title: "Women in 72", text: "A dedicated pathway that sits alongside the league, and a woman or senior player in every QGL team." },
   { title: "Course management", text: "A partnership with the Golf Course Superintendents & Managers Association of India builds skills in course care." },
 ];
 
@@ -375,7 +374,6 @@ export const SEASON_TWO = {
   auction: "Player auction · 28 November 2026 · Delhi",
   targets: [
     { value: "50M+", label: "Social views, impressions and reach" },
-    { value: "2–3%", label: "Engagement on Instagram and LinkedIn" },
     { value: "100+", label: "Pieces of user-generated content" },
     { value: "20+", label: "Articles in national and business press" },
   ],

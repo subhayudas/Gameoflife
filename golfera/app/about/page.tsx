@@ -47,7 +47,7 @@ export default function AboutPage() {
             title="Growing the game from the bottom up."
             sub="10-year partnerships with State Golf Associations to develop golf and create new pathways for junior and grassroots programmes."
           />
-          <ul className="mt-12 grid border-t border-forest-900/20 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-12 grid border-t border-forest-900/20 sm:grid-cols-2 lg:grid-cols-3">
             {GRASSROOTS.map((g, i) => (
               <li key={g.title} className="border-b border-forest-900/20 sm:[&:nth-child(odd)]:border-r lg:border-r lg:last:border-r-0">
                 <Reveal delay={i * 80} className="h-full p-6 md:p-8">

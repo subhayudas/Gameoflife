@@ -197,7 +197,7 @@ function SeasonTwo() {
         <SectionHead eyebrow="Season 2 · Upcoming" title={SEASON_TWO.dates} sub={`${SEASON_TWO.venues}. ${SEASON_TWO.auction}.`} />
         <Reveal>
           <p className="eyebrow mt-14 text-forest-700">Season 2 targets</p>
-          <dl className="mt-6 grid grid-cols-2 gap-8 border-t border-forest-900/20 pt-10 lg:grid-cols-4">
+          <dl className="mt-6 grid grid-cols-2 gap-8 border-t border-forest-900/20 pt-10 lg:grid-cols-3">
             {SEASON_TWO.targets.map((t) => (
               <div key={t.label}>
                 <dt className="serif text-5xl text-forest-900 md:text-6xl">{t.value}</dt>
