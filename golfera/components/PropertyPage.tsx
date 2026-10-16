@@ -95,7 +95,7 @@ function Format({ p }: { p: Property }) {
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-forest-900">
                   <Image src={p.venuePhoto.src} alt={p.venuePhoto.alt} fill sizes="(min-width:1024px) 40vw, 92vw" style={{ objectPosition: p.venuePhoto.pos }} className="object-cover" />
                 </div>
-                <figcaption className="mt-3 text-sm text-ink/60">Qutab Golf Course, New Delhi</figcaption>
+                <figcaption className="mt-3 text-sm text-ink/60">{p.venuePhoto.caption ?? "Qutab Golf Course, New Delhi"}</figcaption>
               </figure>
             </Reveal>
           )}

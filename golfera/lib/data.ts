@@ -47,7 +47,7 @@ export type Property = {
   venues: string[];
   teams: string[];
   teamsTitle?: string;
-  venuePhoto?: { src: string; alt: string; pos?: string };
+  venuePhoto?: { src: string; alt: string; pos?: string; caption?: string };
   /** Past edition or highlights. */
   past: {
     eyebrow: string;
@@ -133,8 +133,8 @@ export const PROPERTIES: Property[] = [
     when: "Season 3 · 13 Nov – 16 Dec 2026",
     where: "Delhi NCR",
     logo: "/img/logos/qgl.webp",
-    photo: "/img/gallery/f/106.webp",
-    position: "50% 60%",
+    photo: "/img/props/qgl-hero.webp",
+    position: "50% 50%",
     flagship: true,
     next: { label: "Next date", value: "13 Nov 2026", sub: "Season 3 opens at Qutab Golf Course with the Inaugural Match and Launch Evening." },
     chips: ["15 teams and growing", "Match play", "Max handicap 18", "Delhi NCR"],
@@ -150,7 +150,7 @@ export const PROPERTIES: Property[] = [
     ],
     venues: ["Qutab Golf Course, New Delhi", "Jaypee Wishtown Golf Course, Noida", "Jaypee Greens Golf & Spa Resort, Greater Noida", "ITC Classic Golf & Country Club, Manesar"],
     teams: ["15 teams and growing, up from 10 in Season 2", "Franchise-owned, with team identity built around city culture"],
-    venuePhoto: QUTAB_PHOTO,
+    venuePhoto: { src: "/img/props/qgl-launch.webp", alt: "Speakers on stage at the Qutab Golf League 2025 launch", pos: "50% 40%", caption: "Qutab Golf League 2025 launch" },
     past: {
       eyebrow: "Seasons 1 and 2",
       title: "Two seasons in the books",
@@ -229,8 +229,8 @@ export const PROPERTIES: Property[] = [
     when: "Annual",
     where: "Qutab Golf Course, Delhi",
     logo: "/img/logos/dgf.webp",
-    photo: "/img/gallery/f/619.webp",
-    position: "50% 50%",
+    photo: "/img/props/dgf-hero.webp",
+    position: "40% 50%",
     next: { label: "Next date", value: "To be announced", sub: "An annual bash at Qutab Golf Course, New Delhi." },
     chips: ["DPS alumni", "100–115 players", "300+ attendees", "Celebrity gala"],
     about: [
@@ -246,7 +246,7 @@ export const PROPERTIES: Property[] = [
     venues: ["Qutab Golf Course, New Delhi"],
     teams: ["Open to DPS alumni: C-suite, entrepreneurs, investors and industry leaders", "On-course contests: Longest Drive, Closest to the Pin, Reach the Stars, Putting Champion, Straightest Drive"],
     teamsTitle: "Who plays",
-    venuePhoto: QUTAB_PHOTO,
+    venuePhoto: { src: "/img/props/dgf-venue.webp", alt: "A player tees off in front of the Qutab Golf Course clubhouse during the Dipsite Golfing Fraternity bash", pos: "40% 50%" },
     past: {
       eyebrow: "Latest edition",
       title: "The 2025 bash",
