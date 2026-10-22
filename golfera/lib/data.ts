@@ -33,7 +33,8 @@ export type Property = {
   when: string;
   where: string;
   logo: string;
-  photo: string;
+  /** Photograph for the hero and card. Omit to lead with the property logo instead. */
+  photo?: string;
   position?: string;
   flagship?: boolean;
   /** Hero: next date headline + small print. */
@@ -73,8 +74,6 @@ const L = {
   eugenix: { src: "/img/logos/eugenix.webp", alt: "Eugenix Hair Sciences", w: 376, h: 89, cls: "h-9 md:h-10" },
   mg: { src: "/img/logos/mg.webp", alt: "MG Motor", w: 178, h: 178, cls: "h-14 md:h-16" },
 } satisfies Record<string, Logo>;
-
-const QUTAB_PHOTO = { src: "/img/gallery/f/105.webp", alt: "Players on the fairway in front of the Qutab Golf Course clubhouse", pos: "50% 55%" };
 
 export const PROPERTIES: Property[] = [
   {
@@ -182,8 +181,6 @@ export const PROPERTIES: Property[] = [
     when: "Annual",
     where: "Qutab Golf Course, Delhi",
     logo: "/img/logos/alma.webp",
-    photo: "/img/gallery/f/130.webp",
-    position: "50% 55%",
     next: { label: "Next date", value: "To be announced", sub: "An annual event at Qutab Golf Course, New Delhi." },
     chips: ["9 alumni teams", "100–115 players", "Shotgun start", "Gala night"],
     about: [
@@ -204,7 +201,6 @@ export const PROPERTIES: Property[] = [
       "The Shri Ram School",
       "Modern Eagles",
     ],
-    venuePhoto: QUTAB_PHOTO,
     past: {
       eyebrow: "Editions",
       title: "A growing tradition",
@@ -271,8 +267,6 @@ export const PROPERTIES: Property[] = [
     when: "Annual",
     where: "Qutab Golf Course, Delhi",
     logo: "/img/logos/titans.webp",
-    photo: "/img/gallery/f/744.webp",
-    position: "50% 40%",
     next: { label: "Next date", value: "To be announced", sub: "An annual invitational at Qutab Golf Course, New Delhi." },
     chips: ["2 teams", "Head to head", "100 players", "#ReliveTheRivalry"],
     about: [
@@ -283,7 +277,6 @@ export const PROPERTIES: Property[] = [
     venues: ["Qutab Golf Course, New Delhi"],
     teamsTitle: "The teams",
     teams: ["Dipsite Falcons", "Modern Eagles"],
-    venuePhoto: QUTAB_PHOTO,
     past: {
       eyebrow: "Latest edition",
       title: "The 2025 invitational",

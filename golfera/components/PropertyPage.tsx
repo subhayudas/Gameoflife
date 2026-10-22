@@ -18,10 +18,12 @@ function Hero({ p }: { p: Property }) {
             <span aria-hidden>/</span>
             <span className="text-olive">{p.kind}</span>
           </nav>
-          <span className="mt-8 flex h-32 w-32 items-center justify-center rounded-full bg-paper shadow-lg shadow-forest-950/30 md:h-36 md:w-36">
-            <Image src={p.logo} alt={`${p.name} logo`} width={160} height={160} priority className="h-auto w-auto max-h-[66%] max-w-[66%] object-contain" />
-          </span>
-          <h1 className="serif mt-6 text-[clamp(2.6rem,6vw,4.6rem)]">{p.name}</h1>
+          {p.photo && (
+            <span className="mt-8 flex h-32 w-32 items-center justify-center rounded-full bg-paper shadow-lg shadow-forest-950/30 md:h-36 md:w-36">
+              <Image src={p.logo} alt={`${p.name} logo`} width={160} height={160} priority className="h-auto w-auto max-h-[66%] max-w-[66%] object-contain" />
+            </span>
+          )}
+          <h1 className={`serif text-[clamp(2.6rem,6vw,4.6rem)] ${p.photo ? "mt-6" : "mt-8"}`}>{p.name}</h1>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-paper/80 md:text-lg">{p.line}</p>
 
           <ul className="mt-6 flex flex-wrap gap-2">
@@ -45,9 +47,17 @@ function Hero({ p }: { p: Property }) {
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-forest-950">
-          <Image src={p.photo} alt={`${p.name} — ${p.kind}`} fill priority sizes="(min-width:1024px) 46vw, 92vw" style={{ objectPosition: p.position }} className="object-cover" />
-        </div>
+        {p.photo ? (
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-forest-950">
+            <Image src={p.photo} alt={`${p.name} — ${p.kind}`} fill priority sizes="(min-width:1024px) 46vw, 92vw" style={{ objectPosition: p.position }} className="object-cover" />
+          </div>
+        ) : (
+          // No photograph yet: the property logo leads, on a clean panel.
+          <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-paper shadow-xl shadow-forest-950/30">
+            <span aria-hidden className="absolute inset-4 rounded-xl border border-forest-900/10 md:inset-6" />
+            <Image src={p.logo} alt={`${p.name} logo`} width={640} height={640} priority sizes="(min-width:1024px) 40vw, 80vw" className="h-auto max-h-[68%] w-auto max-w-[68%] object-contain" />
+          </div>
+        )}
       </Container>
     </section>
   );

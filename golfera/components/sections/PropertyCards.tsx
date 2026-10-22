@@ -8,19 +8,33 @@ import { Arrow, Container, SectionHead } from "./Shared";
 function Card({ p, big }: { p: Property; big?: boolean }) {
   return (
     <Link href={`/properties/${p.slug}`} className="group flex h-full flex-col overflow-hidden bg-paper ring-1 ring-forest-900/10 transition hover:ring-forest-900/30">
-      <div className={`relative overflow-hidden bg-forest-900 ${big ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
-        <Image
-          src={p.photo}
-          alt={`${p.name} — ${p.kind}`}
-          fill
-          sizes={big ? "(min-width:1024px) 50vw, 92vw" : "(min-width:768px) 33vw, 92vw"}
-          style={{ objectPosition: p.position }}
-          className="object-cover transition duration-700 group-hover:scale-105"
-        />
-      </div>
+      {p.photo ? (
+        <div className={`relative overflow-hidden bg-forest-900 ${big ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
+          <Image
+            src={p.photo}
+            alt={`${p.name} — ${p.kind}`}
+            fill
+            sizes={big ? "(min-width:1024px) 50vw, 92vw" : "(min-width:768px) 33vw, 92vw"}
+            style={{ objectPosition: p.position }}
+            className="object-cover transition duration-700 group-hover:scale-105"
+          />
+        </div>
+      ) : (
+        // No photograph yet: the logo fills the image slot on a cream panel.
+        <div className={`flex items-center justify-center bg-cream ${big ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
+          <Image
+            src={p.logo}
+            alt={`${p.name} logo`}
+            width={400}
+            height={400}
+            sizes="(min-width:768px) 20vw, 60vw"
+            className="h-auto max-h-[64%] w-auto max-w-[64%] object-contain transition duration-700 group-hover:scale-105"
+          />
+        </div>
+      )}
 
       <div className={`flex flex-1 ${big ? "gap-5 p-6 md:p-8" : "flex-col gap-4 p-5 md:p-6"}`}>
-        <Image src={p.logo} alt={`${p.name} logo`} width={160} height={160} className={`w-auto shrink-0 object-contain ${big ? "h-24 md:h-28" : "h-16 md:h-20"}`} />
+        {p.photo && <Image src={p.logo} alt={`${p.name} logo`} width={160} height={160} className={`w-auto shrink-0 object-contain ${big ? "h-24 md:h-28" : "h-16 md:h-20"}`} />}
         <div className="flex min-w-0 flex-1 flex-col">
           <span className="eyebrow flex flex-wrap items-center gap-x-3 text-forest-700">
             {p.kind}
